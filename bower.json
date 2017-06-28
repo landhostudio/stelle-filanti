@@ -1,0 +1,15 @@
+{
+  "name": "stelle-filanti",
+  "description": "Official website for Gazzelle Stelle Filanti single",
+  "authors": "Roman Horokhovatskyy",
+  "private": true,
+  "dependencies": {
+    "fastclick": "^1.0.6",
+    "jquery": "^3.2.1"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components"
+  ]
+}
