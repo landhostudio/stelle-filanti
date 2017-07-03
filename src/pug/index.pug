@@ -1,6 +1,117 @@
 extends _layout.pug
 
 block content
-  main.main(role='main')
-    :markdown-it
-      # Stelle Filanti
+  
+  div.hamburger
+    div.container
+      
+      div.container-column
+      
+        div.hamburger-scene
+
+          div.hamburger-scene-bread_top
+            div.hamburger-ingredient.hamburger-ingredient--bread_top
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/bread_top-composed.png', alt='')
+
+          div.hamburger-scene-onions
+            div.hamburger-ingredient.hamburger-ingredient--onion.hamburger-ingredient--onion-1.hamburger-ingredient--onion--active
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/onion-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--onion.hamburger-ingredient--onion-2
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/onion-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--onion.hamburger-ingredient--onion-3
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/onion-composed.png', alt='')
+
+          div.hamburger-scene-tomatos
+            div.hamburger-ingredient.hamburger-ingredient--tomato.hamburger-ingredient--tomato-1.hamburger-ingredient--tomato--active
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/tomato-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--tomato.hamburger-ingredient--tomato-2
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/tomato-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--tomato.hamburger-ingredient--tomato-3
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/tomato-composed.png', alt='')
+
+          div.hamburger-scene-salads
+            div.hamburger-ingredient.hamburger-ingredient--salad.hamburger-ingredient--salad-1.hamburger-ingredient--salad--active
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/salad-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--salad.hamburger-ingredient--salad-2
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/salad-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--salad.hamburger-ingredient--salad-3
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/salad-composed.png', alt='')
+
+          div.hamburger-scene-sauces
+            div.hamburger-ingredient.hamburger-ingredient--sauce.hamburger-ingredient--sauce-1.hamburger-ingredient--sauce--active
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/sauce-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--sauce.hamburger-ingredient--sauce-2
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/sauce-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--sauce.hamburger-ingredient--sauce-3
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/sauce-composed.png', alt='')
+
+          div.hamburger-scene-cheeses
+            div.hamburger-ingredient.hamburger-ingredient--cheese.hamburger-ingredient--cheese-1.hamburger-ingredient--cheese--active
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/cheese-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--cheese.hamburger-ingredient--cheese-2
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/cheese-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--cheese.hamburger-ingredient--cheese-3
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/cheese-composed.png', alt='')
+
+          div.hamburger-scene-meats
+            div.hamburger-ingredient.hamburger-ingredient--meat.hamburger-ingredient--meat-1.hamburger-ingredient--meat--active
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/meat-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--meat.hamburger-ingredient--meat-2
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/meat-composed.png', alt='')
+            div.hamburger-ingredient.hamburger-ingredient--meat.hamburger-ingredient--meat-3
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/meat-composed.png', alt='')
+
+          div.hamburger-scene-bread_bottom
+            div.hamburger-ingredient.hamburger-ingredient--bread_bottom
+              div.hamburger-ingredient-image
+                div.hamburger-ingredient-image-holder
+                  img(src='/img/bread_bottom-composed.png', alt='')
+      
+      div.container-column
+  
+        div.hamburger-ingredients
+          //- x ogni click/touch si aggiunge un ingrediente fino ad un massimo di 3, dopodiché comincia dal 0 quindi rimuove
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--onion Onion
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--tomato Tomato
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--salad Salad
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--sauce Sauce
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--cheese Cheese
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--meat Meat

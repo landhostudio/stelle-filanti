@@ -1,11 +1,21 @@
+@import "func"
 @import "vars"
 // @import "webfonts"
   
+.container
+  display: flex
+  display: flex
+  justify-content: space-between
+  margin-left: auto
+  margin-right: auto
+  max-width: em-calc(1024)
+  padding: 0.5em
+  &-column
+    flex-basis: 50%
+    padding: 0.5em
 body
   font-family: sans-serif
   background-color: $color-2
   color: $color-1
-  border: 1em solid $color-1
-  margin: 0
-  padding: 1em
-  min-height: 100vh
+
+@import "hamburger"
