@@ -6,151 +6,183 @@
     padding-top: em-calc(48)
     &-bread_top
     &-onions
+      margin-top: - per-width(700,42)
       &--empty
-    &-tomatos
-      &--empty
-        height: 1em
     &-salads
+      margin-top: - per-width(700,46)
       &--empty
+        padding-top: per-width(700,82)
+    &-tomatos
+      margin-top: - per-width(700,90)
+      &--empty
+        padding-top: per-width(700,90)
     &-sauces
-      margin-top: - per-width(700,90)
+      margin-top: - per-width(700,78)
       &--empty
-        margin-top: 0
     &-cheeses
-      margin-top: - per-width(700,90)
+      margin-top: - per-width(700,73)
       &--empty
-        margin-bottom: per-width(700,69)
+        padding-top: per-width(700,153)
     &-meats
+      margin-top: - per-width(700,176)
       &--empty
-        height: 1em
     &-bread_bottom
+      margin-top: - per-width(700,144)
   &-ingredient
     position: relative
     &--bread_top
       z-index: 888
       .hamburger-ingredient-image
-        padding-bottom: per-width(700,198)
+        padding-bottom: per-width(700,172)
     &--onion
       display: none
-      margin-top: - per-width(700,62)
+      margin-top: - per-width(700,42)
       &-1
         z-index: 777
         &.hamburger-ingredient--onion--active
           display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,84)
+        + .hamburger-ingredient--onion
+          margin-top: - per-width(700,57)
       &-2
         z-index: 776
         &.hamburger-ingredient--onion--active
           display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,83)
+        + .hamburger-ingredient--onion
+          margin-top: - per-width(700,31)
       &-3
         z-index: 775
         &.hamburger-ingredient--onion--active
           display: block
-      + .hamburger-ingredient--onion
-        margin-top: - per-width(700,72)
-      .hamburger-ingredient-image
-        padding-bottom: per-width(700,98)
-    &--tomato
-      display: none
-      margin-top: - per-width(700,78)
-      &-1
-        z-index: 666
-        &.hamburger-ingredient--tomato--active
-          display: block
-      &-2
-        z-index: 665
-        &.hamburger-ingredient--tomato--active
-          display: block
-      &-3
-        z-index: 664
-        &.hamburger-ingredient--tomato--active
-          display: block
-      + .hamburger-ingredient--tomato
-        margin-top: - per-width(700,97)
-      .hamburger-ingredient-image
-        padding-bottom: per-width(700,133)
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,81)
     &--salad
       display: none
-      margin-top: - per-width(700,89)
+      &-1
+        z-index: 666
+        &.hamburger-ingredient--salad--active
+          display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,95)
+        + .hamburger-ingredient--salad
+          margin-top: - per-width(700,63)
+      &-2
+        z-index: 665
+        &.hamburger-ingredient--salad--active
+          display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,94)
+        + .hamburger-ingredient--salad
+          margin-top: - per-width(700,75)
+      &-3
+        z-index: 664
+        &.hamburger-ingredient--salad--active
+          display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,108)
+    &--tomato
+      display: none
       &-1
         z-index: 555
-        &.hamburger-ingredient--salad--active
+        &.hamburger-ingredient--tomato--active
           display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,115)
+        + .hamburger-ingredient--tomato
+          margin-top: - per-width(700,86)
       &-2
         z-index: 554
-        &.hamburger-ingredient--salad--active
+        &.hamburger-ingredient--tomato--active
           display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,93)
+        + .hamburger-ingredient--tomato
+          margin-top: - per-width(700,40)
       &-3
         z-index: 553
-        &.hamburger-ingredient--salad--active
+        &.hamburger-ingredient--tomato--active
           display: block
-      + .hamburger-ingredient--salad
-        margin-top: - per-width(700,119)
-      .hamburger-ingredient-image
-        padding-bottom: per-width(700,139)
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,122)
     &--sauce
       display: none
-      margin-top: - per-width(700,73)
       &-1
         z-index: 444
         &.hamburger-ingredient--sauce--active
           display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,82)
+        + .hamburger-ingredient--sauce
+          margin-top: - per-width(700,81)
       &-2
         z-index: 443
         &.hamburger-ingredient--sauce--active
           display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,90)
+        + .hamburger-ingredient--sauce
+          margin-top: - per-width(700,72)
       &-3
         z-index: 442
         &.hamburger-ingredient--sauce--active
           display: block
-      .hamburger-ingredient-image
-        padding-bottom: per-width(700,83)
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,82)
     &--cheese
       display: none
-      margin-top: - per-width(700,69)
       &-1
         z-index: 333
         &.hamburger-ingredient--cheese--active
           display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,164)
+        + .hamburger-ingredient--cheese
+          margin-top: - per-width(700,151)
       &-2
         z-index: 332
         &.hamburger-ingredient--cheese--active
           display: block
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,151)
+        + .hamburger-ingredient--cheese
+          margin-top: - per-width(700,142)
       &-3
         z-index: 331
         &.hamburger-ingredient--cheese--active
           display: block
-      + .hamburger-ingredient--cheese
-        margin-top: - per-width(700,156)
-      .hamburger-ingredient-image
-        padding-bottom: per-width(700,172)
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,177)
     &--meat
       display: none
-      visibility: hidden
-      margin-top: - per-width(700,170)
       &-1
         z-index: 222
         &.hamburger-ingredient--meat--active
           display: block
-          visibility: visible
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,184)
+        + .hamburger-ingredient--meat
+          margin-top: - per-width(700,85)
       &-2
         z-index: 221
         &.hamburger-ingredient--meat--active
           display: block
-          visibility: visible
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,210)
+        + .hamburger-ingredient--meat
+          margin-top: - per-width(700,107)
       &-3
         z-index: 220
         &.hamburger-ingredient--meat--active
           display: block
-          visibility: visible
-      + .hamburger-ingredient--meat
-        margin-top: - per-width(700,65)
-      .hamburger-ingredient-image
-        padding-bottom: per-width(700,203)
+        .hamburger-ingredient-image
+          padding-bottom: per-width(700,228)
     &--bread_bottom
       z-index: 111
-      margin-top: - per-width(700,101)
       .hamburger-ingredient-image
-        padding-bottom: per-width(700,205)
+        padding-bottom: per-width(700,232)
     &-image
       position: relative
       overflow: hidden

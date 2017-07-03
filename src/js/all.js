@@ -14,8 +14,8 @@
 
   function initHamburger() {
     var timesClickedOnion = 0;
-    var timesClickedTomato = 0;
     var timesClickedSalad = 0;
+    var timesClickedTomato = 0;
     var timesClickedSauce = 0;
     var timesClickedCheese = 0;
     var timesClickedMeat = 0;
@@ -40,27 +40,6 @@
         console.log('added first onion');
       }
     });
-    $('.hamburger-ingredients-button--tomato').bind( 'click', function( event ) {
-      timesClickedTomato++;
-      if ( timesClickedTomato == 1 ) {
-        $('.hamburger-ingredient--tomato-2').addClass('hamburger-ingredient--tomato--active');
-        console.log('added second tomato');
-      } else if ( timesClickedTomato == 2 ) {
-        $('.hamburger-ingredient--tomato-3').addClass('hamburger-ingredient--tomato--active');
-        console.log('added third tomato');
-      } else if ( timesClickedTomato == 3 ) {
-        $('.hamburger-ingredient--tomato-1').removeClass('hamburger-ingredient--tomato--active');
-        $('.hamburger-ingredient--tomato-2').removeClass('hamburger-ingredient--tomato--active');
-        $('.hamburger-ingredient--tomato-3').removeClass('hamburger-ingredient--tomato--active');
-        $('.hamburger-scene-tomatos').addClass('hamburger-scene-tomatos--empty');
-        console.log('removed all tomatos');
-      } else if ( timesClickedTomato == 4 ) {
-        timesClickedTomato = 0;
-        $('.hamburger-ingredient--tomato-1').addClass('hamburger-ingredient--tomato--active');
-        $('.hamburger-scene-tomatos').removeClass('hamburger-scene-tomatos--empty');
-        console.log('added first tomato');
-      }
-    });
     $('.hamburger-ingredients-button--salad').bind( 'click', function( event ) {
       timesClickedSalad++;
       if ( timesClickedSalad == 1 ) {
@@ -80,6 +59,27 @@
         $('.hamburger-ingredient--salad-1').addClass('hamburger-ingredient--salad--active');
         $('.hamburger-scene-salads').removeClass('hamburger-scene-salads--empty');
         console.log('added first salad');
+      }
+    });
+    $('.hamburger-ingredients-button--tomato').bind( 'click', function( event ) {
+      timesClickedTomato++;
+      if ( timesClickedTomato == 1 ) {
+        $('.hamburger-ingredient--tomato-2').addClass('hamburger-ingredient--tomato--active');
+        console.log('added second tomato');
+      } else if ( timesClickedTomato == 2 ) {
+        $('.hamburger-ingredient--tomato-3').addClass('hamburger-ingredient--tomato--active');
+        console.log('added third tomato');
+      } else if ( timesClickedTomato == 3 ) {
+        $('.hamburger-ingredient--tomato-1').removeClass('hamburger-ingredient--tomato--active');
+        $('.hamburger-ingredient--tomato-2').removeClass('hamburger-ingredient--tomato--active');
+        $('.hamburger-ingredient--tomato-3').removeClass('hamburger-ingredient--tomato--active');
+        $('.hamburger-scene-tomatos').addClass('hamburger-scene-tomatos--empty');
+        console.log('removed all tomatos');
+      } else if ( timesClickedTomato == 4 ) {
+        timesClickedTomato = 0;
+        $('.hamburger-ingredient--tomato-1').addClass('hamburger-ingredient--tomato--active');
+        $('.hamburger-scene-tomatos').removeClass('hamburger-scene-tomatos--empty');
+        console.log('added first tomato');
       }
     });
     $('.hamburger-ingredients-button--sauce').bind( 'click', function( event ) {
