@@ -1,0 +1,145 @@
+.header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  z-index: 9999
+  transition: background-color 250ms
+  @include media($size-m-min)
+    &:after
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 45%
+      content: ''
+      background-color: $color-2
+      z-index: -1
+  &--active
+    @include media(max-width $size-m-max)
+      background-color: $color-2
+      height: 100vh
+
+  .container
+    display: flex
+    flex-wrap: wrap
+    @include media(max-width $size-m-max)
+      align-items: center
+      justify-content: space-between
+    @include media($size-m-min)
+      justify-content: space-around
+
+  &-logo
+    @include media(max-width $size-m-max)
+      order: 2
+      flex-grow: 1
+      text-align: center
+    @include media($size-m-min)
+      order: 3
+    h1
+      font-size: 1em
+    a
+      display: inline-block
+      line-height: 0
+      transition: transform 150ms
+      &:hover
+        transform: scale(1.0625)
+    &-1
+      @include media(max-width $size-m-max)
+        display: inline
+      @include media($size-m-min)
+        display: none
+    &-2
+      @include media(max-width $size-m-max)
+        display: none
+      @include media($size-m-min)
+        display: inline
+
+  &-burger, &-gif, &-video, &-landho
+    @include media(max-width $size-m-max)
+      display: none
+    a
+      transition: transform 150ms
+      &:hover
+        transform: scale(1.0625)
+      @include media($size-m-min)
+        display: block
+        padding-top: $space * 3
+        font-family: 'Souses', sans-serif
+        font-size: em-calc(24)
+        text-transform: uppercase
+
+  &-burger
+    @include media($size-m-min)
+      order: 1
+  &-gif
+    @include media($size-m-min)
+      order: 2
+  &-video
+    @include media($size-m-min)
+      order: 4
+  &-landho
+    @include media($size-m-min)
+      order: 5
+
+  &-toggle
+    @include media(max-width $size-m-max)
+      order: 1
+    @include media($size-m-min)
+      display: none
+    &-button
+      text-align: center
+      text-decoration: none
+      white-space: nowrap
+      border: none
+      background-color: transparent
+      background-image: none
+      vertical-align: middle
+      cursor: pointer
+      user-select: none
+      touch-action: manipulation
+      padding: 0
+      margin: 0
+      line-height: 0
+      transition: transform 150ms
+      &:focus,
+      &:hover
+        outline: 0
+      &:hover
+        transform: scale(1.0625)
+      &-1
+        display: block
+        .header--active &
+          display: none
+      &-2
+        display: none
+        .header--active &
+          display: block
+
+  &-nav
+    @include media(max-width $size-m-max)
+      flex-basis: 100%
+      text-align: center
+      height: 0
+      visibility: hidden
+      order: 3
+      padding-top: 0
+      transition: padding 150ms
+      .header--active &
+        height: auto
+        visibility: visible
+        padding-top: $space * 2
+      a
+        display: block
+        padding: $space
+        font-family: 'Souses', sans-serif
+        font-size: em-calc(20)
+        text-transform: uppercase
+        opacity: 0
+        transition: opacity 150ms, transform 150ms
+        &:hover
+          transform: scale(1.0625)
+        .header--active &
+          opacity: 1
+    @include media($size-m-min)
+      display: none

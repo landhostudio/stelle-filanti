@@ -1,0 +1,55 @@
+header.header(role='banner')
+  div.container
+
+    div.header-logo
+      h1
+        a(href='/')
+          span.hidden #{title}
+          span.header-logo-1
+            include ../../img/logo-1.svg
+          span.header-logo-2
+            include ../../img/logo-2.svg
+    div.header-burger
+      if (page == 'Home')
+        a.active(href='/') Burger
+      else
+        a(href='/') Burger
+    div.header-gif
+      if (page == 'Hot Gif')
+        a.active(href='/gif') Hot GIF
+      else
+        a(href='/gif') Hot GIF
+    div.header-video
+      if (page == 'Video')
+        a.active(href='/video') Video
+      else
+        a(href='/video') Video
+    div.header-landho
+      a(href='http://landhostudio.com', target="_blank") Land Ho!
+
+    div.header-toggle
+      button(type='button').header-toggle-button
+        span.hidden Open navigation
+        span.header-toggle-button-1
+          include ../../img/nav.svg
+        span.header-toggle-button-2
+          include ../../img/close.svg
+
+    div.header-nav
+
+      if (page == 'Home')
+        a.active(href='/') Burger
+      else
+        a(href='/') Burger
+
+      if (page == 'Hot Gif')
+        a.active(href='/gif') Hot GIF
+      else
+        a(href='/gif') Hot GIF
+
+      if (page == 'Video')
+        a.active(href='/video') Video
+      else
+        a(href='/video') Video
+
+      a(href='http://landhostudio.com', target="_blank") Land Ho!

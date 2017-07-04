@@ -6,10 +6,17 @@
   'use strict';
 
   var init = function() {
+    initHeader();
     if ( $('.hamburger').length ) {
       initHamburger();
     }
     initLog();
+  };
+
+  function initHeader() {
+    $('.header-toggle-button').click(function() {
+      $('.header').toggleClass('header--active');
+    });
   };
 
   function initHamburger() {
