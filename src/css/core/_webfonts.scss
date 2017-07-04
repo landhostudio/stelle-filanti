@@ -1,0 +1,17 @@
+@font-face {
+	font-family: 'Gotham';
+	src: local('Gotham Bold Italic'), local('Gotham-BoldItalic'),
+		   url('../fonts/Gotham-BoldItalic.woff2') format('woff2'),
+		   url('../fonts/Gotham-BoldItalic.woff') format('woff');
+	font-weight: bold;
+	font-style: italic;
+}
+
+@font-face {
+	font-family: 'Souses';
+	src: local('Souses'),
+    	 url('../fonts/Souses.woff2') format('woff2'),
+    	 url('../fonts/Souses.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+}
