@@ -5,11 +5,14 @@ block content
   
   div.hamburger
     div.container
-      
-      div.container-column
-      
-        div.hamburger-scene
 
+      div.hamburger-scene
+
+        div.hamburger-scene-holder
+        
+          div.hamburger-scene-message
+            include ../img/compose.svg
+        
           div.hamburger-scene-bread_top
             div.hamburger-ingredient.hamburger-ingredient--bread_top
               div.hamburger-ingredient-image
@@ -105,13 +108,37 @@ block content
               div.hamburger-ingredient-image
                 div.hamburger-ingredient-image-holder
                   img(src='/img/bread_bottom.png', alt='')
-      
-      div.container-column
-  
-        div.hamburger-ingredients
-          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--onion Onion
-          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--salad Salad
-          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--tomato Tomato
-          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--sauce Sauce
-          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--cheese Cheese
-          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--meat Meat
+
+      div.hamburger-ingredients
+        div.hamburger-ingredients-holder
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--onion
+            span Onion
+            span
+              include ../img/plus.svg
+        div.hamburger-ingredients-holder
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--salad
+            span Salad
+            span
+              include ../img/plus.svg
+        div.hamburger-ingredients-holder
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--tomato
+            span Tomato
+            span
+              include ../img/plus.svg
+        div.hamburger-ingredients-holder
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--sauce
+            span Sauce
+            span
+              include ../img/plus.svg
+        div.hamburger-ingredients-holder
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--cheese
+            span Cheese
+            span
+              include ../img/plus.svg
+        div.hamburger-ingredients-holder
+          button(type='button').hamburger-ingredients-button.hamburger-ingredients-button--meat
+            span Meat
+            span
+              include ../img/plus.svg
+        div.hamburger-ingredients-holder.hamburger-ingredients-holder--order
+          a(href='/map').hamburger-ingredients-button.hamburger-ingredients-button--order Order

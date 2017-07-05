@@ -1,10 +1,36 @@
 .hamburger
-  display: none
   .container
     position: relative
+    height: 100vh
+
   &-scene
-    position: relative
-    padding-top: em-calc(48)
+    @include media($size-m-min)
+      position: absolute
+      top: 50%
+      left: 0
+      width: 50%
+      transform: translate(50%, -50%)
+    
+    &-message
+      position: absolute
+      top: -33.333333%
+      width: 125%
+      text-align: right
+      z-index: 9999999
+      @include media($size-m-min)
+        top: 25%
+        transform: translateY(-75%)
+      svg
+        width: 50%
+        height: auto
+
+    &-holder
+      position: absolute
+      top: 50%
+      left: 0
+      width: 50%
+      transform: translate(50%, -50%)
+    
     &-bread_top
     &-onions
       margin-top: - per-height(700,42)
@@ -202,20 +228,50 @@
           height: auto
           transform: translateY(-50%)
   &-ingredients
-    display: flex
-    flex-wrap: wrap
-    justify-content: space-between
-    width: 100%
+    @include media(max-width $size-m-max)
+      position: fixed
+      left: 0
+      bottom: $space * 2
+      display: flex
+      flex-wrap: wrap
+      justify-content: space-between
+      width: 100%
+    @include media($size-m-min)
+      position: absolute
+      top: 50%
+      left: $space * 2
+      transform: translateY(-50%)
+      background-color: $color-1
+      padding: $space * 6 $space * 4
+      border-radius: em-calc(12)
+      width: em-calc(240)
+      z-index: 999999999
+      @include media($size-l-min)
+        width: em-calc(280)
+    &-holder
+      @include media(max-width $size-m-max)
+        flex-basis: 33.333333%
+        text-align: center
+      @include media($size-m-min)
+        margin-bottom: $space * 3
+      &--order
+        @include media(max-width $size-m-max)
+          flex-basis: 100%
+        @include media($size-m-min)
+          margin-bottom: 0
+      svg
+        @include media(max-width $size-m-max)
+          display: none
     &-button
       display: inline-block
       padding: 0.5em 1em
-      font-weight: bold
+      font-family: 'Souses', sans-serif
+      font-size: em-calc(14)
+      text-transform: uppercase
       text-align: center
       text-decoration: none
       white-space: nowrap
-      border: 1px solid pink
-      color: red
-      border-radius: 12px
+      border: none
       line-height: 1
       background-color: transparent
       background-image: none
@@ -223,9 +279,40 @@
       cursor: pointer
       user-select: none
       touch-action: manipulation
+      transition: transform 150ms
+      @include media($size-m-min)
+        padding: 0
+        color: $color-2
+        font-size: em-calc(24)
+        width: 100%
+        display: flex
+        align-items: center
+        justify-content: space-between
+      &:focus,
+      &:hover
+        outline: 0
+      &:hover
+        transform: scale(1.0625)
+        @include media($size-m-min)
+          svg
+            transform: rotate(180deg)
+      svg
+        transition: all 500ms
       &--onion
       &--tomato
       &--salad
       &--sauce
       &--cheese
       &--meat
+      &--order
+        margin-top: $space
+        color: $color-2
+        background-color: $color-1
+        border-radius: em-calc(12)
+        @include media($size-m-min)
+          display: inline-block
+          text-align: center
+          padding: 0.5em 1em
+          background-color: $color-2
+          color: $color-1
+          text-align: center

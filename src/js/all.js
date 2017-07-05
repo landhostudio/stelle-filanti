@@ -1,5 +1,7 @@
 //=include ../../bower_components/jquery/dist/jquery.js
 //=include ../../bower_components/fastclick/lib/fastclick.js
+//=include ../../bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js
+window.viewportUnitsBuggyfill.init();
 
 (function($) {
 

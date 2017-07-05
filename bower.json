@@ -6,7 +6,8 @@
   "dependencies": {
     "fastclick": "^1.0.6",
     "jquery": "^3.2.1",
-    "normalize-scss": "^3.0.3"
+    "normalize-scss": "^3.0.3",
+    "viewport-units-buggyfill": "^0.6.1"
   },
   "ignore": [
     "**/.*",
