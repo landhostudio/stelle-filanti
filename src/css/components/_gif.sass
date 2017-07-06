@@ -1,0 +1,42 @@
+.gif
+  .container
+    height: 100vh
+    max-width: em-calc(800)
+    @include media(max-width $size-m-max)
+      padding-top: em-calc(120)
+    @include media($size-m-min)
+      padding-top: em-calc(240)
+  &-heading
+    text-align: center
+    padding-bottom: $space * 2
+    h2
+      @include media(max-width $size-m-max)
+        font-size: em-calc(48)
+      @include media($size-m-min)
+        font-size: em-calc(72)
+  &-items
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    margin-left: - $space
+    padding-right: - $space
+  &-item
+    padding: $space
+    @include media(max-width $size-m-max)
+      flex-basis: 100%
+    @include media($size-m-min)
+      flex-basis: 50%
+    &-image
+      position: relative
+      padding-bottom: per-height(1,1)
+      overflow: hidden
+      img
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%,-50%)
+        width: auto
+        min-width: 100%
+        height: auto
+        min-height: 100%
+        max-height: 100%

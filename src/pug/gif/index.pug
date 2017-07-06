@@ -1,0 +1,31 @@
+extends ../_layout.pug
+
+block content
+  
+  include ../components/_header
+
+  div.gif
+    div.container
+      div.gif-heading
+        h2 Video
+      div.gif-items
+        
+        mixin image(src,link)
+          div.gif-item
+            a(href='http://www.facebook.com/sharer/sharer.php?u=https://giphy.com/gifs/' + link, target='_blank')
+              div.gif-item-image
+                img(src=src alt='')
+
+        +image('/img/tk2MjKGg0h04g.gif', 'tk2MjKGg0h04g')
+        +image('/img/nzlxztjcNDKzS.gif', 'nzlxztjcNDKzS')
+        +image('/img/3oEduHbGIZHblgkx20.gif', '3oEduHbGIZHblgkx20')
+        +image('/img/Em4eDeu5Rcyf6.gif', 'Em4eDeu5Rcyf6')
+        +image('/img/VCjnrwDt3QZ9K.gif', 'VCjnrwDt3QZ9K')
+        +image('/img/x2ouXfknCbtg4.gif', 'x2ouXfknCbtg4')
+        +image('/img/sIJszcGE4RSRW.gif', 'sIJszcGE4RSRW')
+        +image('/img/QoCJDp6ttVSw.gif', 'QoCJDp6ttVSw')
+        +image('/img/BH87AneT94Ziw.gif', 'BH87AneT94Ziw')
+        +image('/img/YmsvQe5JFSa1q.gif', 'YmsvQe5JFSa1q')
+        +image('/img/5IALGbGDGCPrq.gif', '5IALGbGDGCPrq')
+        +image('/img/l0IyemUvzjXsA5gwE.gif', 'l0IyemUvzjXsA5gwE')
+        +image('/img/111WF6AJfztMvm.gif', '111WF6AJfztMvm')
