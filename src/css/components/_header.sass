@@ -19,6 +19,12 @@
     @include media(max-width $size-m-max)
       background-color: $color-2
       height: 100vh
+    
+  &--unstarted
+    transition: transform 750ms
+    transform: translateY(-100%)
+  &--started
+    transform: translateY(0)
 
   .container
     display: flex

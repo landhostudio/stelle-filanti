@@ -1,0 +1,25 @@
+.video
+  .container
+    height: 100vh
+    max-width: em-calc(800)
+    @include media(max-width $size-m-max)
+      padding-top: em-calc(120)
+    @include media($size-m-min)
+      padding-top: em-calc(240)
+  &-heading
+    text-align: center
+    padding-bottom: $space * 2
+    h2
+      @include media(max-width $size-m-max)
+        font-size: em-calc(48)
+      @include media($size-m-min)
+        font-size: em-calc(72)
+  &-holder
+    position: relative
+    padding-bottom: per-height(16,9)
+    iframe
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%

@@ -12,6 +12,15 @@ window.viewportUnitsBuggyfill.init();
     if ( $('.hamburger').length ) {
       initHamburger();
     }
+    if ( $('.character').length ) {
+      initCharacter();
+    }
+    if ( $('.map').length ) {
+      initMap();
+    }
+    if ( $('.video').length ) {
+      initVideo();
+    }
     initLog();
   };
 
@@ -148,6 +157,57 @@ window.viewportUnitsBuggyfill.init();
         console.log('removed two meats');
       }
     });
+  };
+
+  function initCharacter() {
+    // $('.character').addClass('character--active');
+    $('.character').addClass('character--active').delay(3000).queue( function(next) {
+      $(this).addClass('character--disabled');
+      next();
+    });
+    $('.header').delay(3000).queue( function(next) {
+      $(this).addClass('header--started');
+      next();
+    });
+  };
+
+  function initMap() {
+    // dopo l'ordine fammi vedere il contenuto
+    $('.map').delay(3500).queue( function(next) {
+      $(this).addClass('map--active');
+      next();
+    });
+    $('.map-canvas').delay(3500).queue( function(next) {
+      var imageSrc = '/img/map.gif';
+      var image = '<img src="'+imageSrc+'" alt="">'
+      $(this).append(image);
+      $(this).addClass('map-canvas--active');
+      next();
+    });
+    // bisogna sapere quanto dura animazione della mappa
+    $('.map-canvas').delay(5000).queue( function(next) {
+      $('.map-heading h2').text('Video');
+      $(this).addClass('map-canvas--disabled');
+      next();
+    });
+    // in base a questa animazione infinine si farà vedere il video
+    $('.map-video').delay(9000).queue( function(next) {
+      
+      var id = 'FR6DI04wAq8';
+      var videoSrc = 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1';
+      var iframe = '<iframe src="'+videoSrc+'" frameborder="0" allowfullscreen></iframe>';
+      $(this).append(iframe);
+      $(this).addClass('map-video--active');
+
+      next();
+    });
+  };
+
+  function initVideo() {
+    var id = 'FR6DI04wAq8';
+    var videoSrc = 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1';
+    var iframe = '<iframe src="'+videoSrc+'" frameborder="0" allowfullscreen></iframe>';
+    $('.video-holder').append(iframe);
   };
 
   function initLog() {

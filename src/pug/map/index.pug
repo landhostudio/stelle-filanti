@@ -1,0 +1,22 @@
+extends ../_layout.pug
+
+block content
+  
+  include ../components/_header-2
+
+  //- STEP 1: il personaggio animato o vettoriale
+  div.character
+    div.container
+      div.character-object
+        //- rendere le nuvolette con i testi uppercase
+        include ../../img/order.svg
+
+  div.map
+    div.container
+      div.map-heading
+        h2 Burger Delivery
+      div.map-canvas
+        //- insert GIF
+      div.map-video
+        //- STEP 3: parte il video (iframe)
+        //- iframe(src='https://www.youtube.com/embed/FR6DI04wAq8?rel=0&amp;controls=0&amp;showinfo=0;autoplay=1' frameborder='0' allowfullscreen)
