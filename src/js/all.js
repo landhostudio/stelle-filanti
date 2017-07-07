@@ -1,6 +1,8 @@
 //=include ../../bower_components/jquery/dist/jquery.js
 //=include ../../bower_components/fastclick/lib/fastclick.js
 //=include ../../bower_components/viewport-units-buggyfill/viewport-units-buggyfill.js
+//=include ../../bower_components/imagesloaded/imagesloaded.pkgd.js
+
 window.viewportUnitsBuggyfill.init();
 
 (function($) {
@@ -18,6 +20,7 @@ window.viewportUnitsBuggyfill.init();
     if ( $('.map').length ) {
       initMap();
     }
+    initGif();
     if ( $('.video').length ) {
       initVideo();
     }
@@ -177,29 +180,37 @@ window.viewportUnitsBuggyfill.init();
       $(this).addClass('map--active');
       next();
     });
-    $('.map-canvas').delay(3500).queue( function(next) {
-      var imageSrc = '/img/map.gif';
-      var image = '<img src="'+imageSrc+'" alt="">'
-      $(this).append(image);
-      $(this).addClass('map-canvas--active');
-      next();
-    });
-    // bisogna sapere quanto dura animazione della mappa
-    $('.map-canvas').delay(5000).queue( function(next) {
-      $('.map-heading h2').text('Video');
-      $(this).addClass('map-canvas--disabled');
-      next();
-    });
-    // in base a questa animazione infinine si farà vedere il video
-    $('.map-video').delay(9000).queue( function(next) {
-      
-      var id = 'int1DQ42Rqo';
-      var videoSrc = 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1';
-      var iframe = '<iframe src="'+videoSrc+'" frameborder="0" allowfullscreen></iframe>';
-      $(this).append(iframe);
-      $(this).addClass('map-video--active');
+    $('.map-canvas').imagesLoaded().done(function(instance) {
+      $('.map-canvas').delay(3500).queue( function(next) {
+        // var imageSrc = '/img/map.gif';
+        // var image = '<img src="'+imageSrc+'" alt="">'
+        // $(this).append(image);
+        $(this).addClass('map-canvas--active');
+        next();
+      });
+      // bisogna sapere quanto dura animazione della mappa
+      $('.map-canvas').delay(5000).queue( function(next) {
+        $('.map-heading h2').text('Video');
+        $(this).addClass('map-canvas--disabled');
+        next();
+      });
+      // in base a questa animazione infinine si farà vedere il video
+      $('.map-video').delay(9000).queue( function(next) {
+        
+        var id = 'int1DQ42Rqo';
+        var videoSrc = 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1';
+        var iframe = '<iframe src="'+videoSrc+'" frameborder="0" allowfullscreen></iframe>';
+        $(this).append(iframe);
+        $(this).addClass('map-video--active');
 
-      next();
+        next();
+      });
+    });
+  };
+
+  function initGif() {
+    $('.gif-item').imagesLoaded().done(function(instance) {
+      $('.gif-item-image img').addClass('loaded');
     });
   };
 

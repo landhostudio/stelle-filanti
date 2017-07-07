@@ -30,6 +30,7 @@
       position: relative
       padding-bottom: per-height(1,1)
       overflow: hidden
+      background-color: $color-1
       img
         position: absolute
         top: 50%
@@ -40,3 +41,7 @@
         height: auto
         min-height: 100%
         max-height: 100%
+        opacity: 0
+        transition: opacity 250ms
+        &.loaded
+          opacity: 1
