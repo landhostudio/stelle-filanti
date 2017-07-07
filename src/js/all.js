@@ -193,7 +193,7 @@ window.viewportUnitsBuggyfill.init();
     // in base a questa animazione infinine si farà vedere il video
     $('.map-video').delay(9000).queue( function(next) {
       
-      var id = 'FR6DI04wAq8';
+      var id = 'int1DQ42Rqo';
       var videoSrc = 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1';
       var iframe = '<iframe src="'+videoSrc+'" frameborder="0" allowfullscreen></iframe>';
       $(this).append(iframe);
@@ -204,7 +204,7 @@ window.viewportUnitsBuggyfill.init();
   };
 
   function initVideo() {
-    var id = 'FR6DI04wAq8';
+    var id = 'int1DQ42Rqo';
     var videoSrc = 'https://www.youtube.com/embed/' + id + '?rel=0&amp;showinfo=0;autoplay=1';
     var iframe = '<iframe src="'+videoSrc+'" frameborder="0" allowfullscreen></iframe>';
     $('.video-holder').append(iframe);
