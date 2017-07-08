@@ -190,7 +190,7 @@ window.viewportUnitsBuggyfill.init();
       });
       // bisogna sapere quanto dura animazione della mappa
       $('.map-canvas').delay(5000).queue( function(next) {
-        $('.map-heading h2').text('Video');
+        $('.map-heading h2').text('Stelle Filanti');
         $(this).addClass('map-canvas--disabled');
         next();
       });
